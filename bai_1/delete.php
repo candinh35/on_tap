@@ -8,6 +8,7 @@ if (isset($_GET['id'])) {
     $row = $tmp->getOne($id);
     $result = $studentsDAL->delete($id);
     $checked = __DIR__ . '/' . $row['avata'];
+    echo $checked;
     unlink($checked);
-    header('location: list_students.php');
+    // header('location: list_students.php');
 }
